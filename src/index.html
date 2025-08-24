@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  
+  <!-- SEO Meta Tags -->
+  <title>Tango Binary Puzzle - The Sun and Moon Game</title>
+  <meta name="description" content="Tango is a logic-based binary puzzle game. Fill the 6x6 grid with suns (☀️) and moons (🌙), following simple rules. Also known as Binary Puzzle or Tazuku.">
+  <meta name="keywords" content="tango, binary puzzle, tazuku, logic game, brain teaser, online puzzle, sun and moon game, 6x6 grid, LinkedIn game">
+  <meta name="author" content="Your Name">
+
+  <!-- Open Graph / Social Sharing Meta Tags -->
+  <meta property="og:title" content="Tango Binary Puzzle">
+  <meta property="og:description" content="Tango is a fun and challenging logic game. Play the Sun and Moon puzzle now!">
+  <meta property="og:image" content="https://placehold.co/1200x630/0f1724/7dd3fc?text=Tango+Puzzle">
+  <meta property="og:url" content="https://your-game-url.com">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://placehold.co/32x32/0f1724/f59e0b?text=🌙" type="image/png">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- Background element for visual styling -->
+  <div class="bg"></div>
+
+  <!-- Main application container -->
+  <div class="app">
+    <!-- Header section for the game title and meta info -->
+    <header>
+      <h1>Tango — 6×6</h1>
+      <div class="meta">
+        <div class="timer">Time: <span id="time">00:00</span></div>
+        <div class="score">Last: <span id="lastScore">--</span></div>
+      </div>
+    </header>
+
+    <!-- Main content area containing the board and side panel -->
+    <div class="content">
+      <!-- Game board container -->
+      <div class="board-wrap">
+        <div class="board" id="board"></div>
+      </div>
+
+      <!-- Side panel for controls and rules -->
+      <div class="side">
+        <!-- Control buttons for the game -->
+        <div style="display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-bottom:10px">
+          <button id="undoBtn" class="btn secondary">Undo</button>
+          <button id="hintBtn" class="btn">Hint (<span id="hintTimer">20</span>s)</button>
+          <button id="newBtn" class="btn">New Puzzle</button>
+        </div>
+
+        <!-- Rules section -->
+        <div class="rules">
+          <strong>Rules</strong>
+          <ol>
+            <li>Fill each cell with <strong>Sun ☀️</strong> or <strong>Moon 🌙</strong>.</li>
+            <li>No more than two identical symbols next to each other (horizontally or vertically).</li>
+            <li>Each row and each column must contain exactly three Suns and three Moons.</li>
+            <li>Cells separated by an <strong>=</strong> must be the <em>same</em>.</li>
+            <li>Cells separated by an <strong>X</strong> must be the <em>opposite</em>.</li>
+            <li>If you break a rule, the affected row/column will flash red after 1 second.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer section with credits and scoring info -->
+    <div class="footer">
+      <div>Made with ❤️ — Tango Demo</div>
+      <div>Score = Time taken to solve</div>
+    </div>
+  </div>
+
+  <!-- Link to the JavaScript file -->
+  <script src="script.js"> </script>
+
+</body>
+
+</html>
